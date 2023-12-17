@@ -2,6 +2,7 @@
 
 (menu-bar-mode 0)
 (column-number-mode 1)
+(electric-pair-mode +1)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
