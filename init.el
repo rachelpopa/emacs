@@ -7,7 +7,11 @@
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
 (show-paren-mode 1)
+(set-face-attribute 'default nil :height 160)
 
+;;key bindings
+(global-set-key "\C-z" 'undo)
+(global-set-key [\C-S-left-z] 'redo)
 
 ;;Packages
 (require 'package)
@@ -25,6 +29,13 @@
          ("C-c f" . hydra-lsp/body)))
 
 (add-hook 'go-mode-hook #'lsp)
+
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
+  
+(use-package magit
+  :ensure t)
 
 (use-package treemacs
   :ensure t
